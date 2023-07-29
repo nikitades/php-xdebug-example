@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Enable XDebug",
+      "type": "shell",
+      "command": "echo 'xdebug.start_with_request=yes' >> $PHP_CONF_D/xdebug.ini",
+      "presentation": {
+        "reveal": "never",
+        "clear": true,
+        "close": true
+      }
+    },
+    {
+      "label": "Disable XDebug",
+      "type": "shell",
+      "command": "sed -i.bu '/xdebug.start_with_request=yes/d' $PHP_CONF_D/xdebug.ini",
+      "presentation": {
+        "reveal": "never",
+        "clear": true,
+        "close": true
+      }
+    }
+  ]
+}
